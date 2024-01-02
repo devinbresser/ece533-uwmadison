@@ -1,0 +1,165 @@
+(* Content-type: application/vnd.wolfram.cdf.text *)
+
+(*** Wolfram CDF File ***)
+(* http://www.wolfram.com/cdf *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*************************************************************************)
+(*                                                                       *)
+(*                                                                       *)
+(*  This file was created under the Wolfram Enterprise licensing terms.  *)
+(*                                                                       *)
+(*       For additional information concerning CDF licensing see:        *)
+(*                                                                       *)
+(*        www.wolfram.com/cdf/adopting-cdf/licensing-options.html        *)
+(*                                                                       *)
+(*                                                                       *)
+(*                                                                       *)
+(*************************************************************************)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[      1064,         20]
+NotebookDataLength[      5268,        144]
+NotebookOptionsPosition[      5126,        129]
+NotebookOutlinePosition[      5520,        145]
+CellTagsIndexPosition[      5477,        142]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Histogram Equalization", "Section",
+ CellChangeTimes->{{3.778937189819875*^9, 
+  3.778937195526094*^9}},ExpressionUUID->"bd731fc8-7053-49c4-be8a-\
+07930eb5318d"],
+
+Cell[CellGroupData[{
+
+Cell["Problem #0", "Subsection",
+ CellChangeTimes->{{3.778937238881341*^9, 
+  3.77893724085712*^9}},ExpressionUUID->"5c766c5c-c00a-4e63-8967-\
+6a469730e3de"],
+
+Cell["\<\
+In the Visual Vocabulary, there is a section (on the left side of the Intro \
+page) called Histograms. Read this carefully, and play with the various \
+Manipulates to get a feel for how histogram equalization can help adjust the \
+images.\
+\>", "Text",
+ CellChangeTimes->{{3.778937198651004*^9, 
+  3.778937289307288*^9}},ExpressionUUID->"dfde67c1-c5b4-4185-b339-\
+c3e03982172e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem #1", "Subsection",
+ CellChangeTimes->{{3.778937291529345*^9, 3.778937298804062*^9}, 
+   3.873883711978137*^9, {3.905246943321765*^9, 
+   3.905246944266717*^9}},ExpressionUUID->"8020620e-d312-4b24-823b-\
+f3845341c750"],
+
+Cell["\<\
+Build your own function to mimic the behavior of ImageAdjust[ ] by (a) find \
+the largest and the smallest pixel values in the image (b) specify a point \
+function that maps the smallest value to zero, the largest to one, and is a \
+straight line in between.
+
+Show that your own \[OpenCurlyDoubleQuote]imageAdjust\[CloseCurlyDoubleQuote] \
+behaves the same as the \[OpenCurlyDoubleQuote]real\[CloseCurlyDoubleQuote] \
+ImageAdjust.\
+\>", "Text",
+ CellChangeTimes->{
+  3.7789373635231133`*^9, {3.7789374033023577`*^9, 3.7789374423974752`*^9}, 
+   3.778937621921886*^9, {3.778942263776415*^9, 3.778942288395265*^9}, {
+   3.780419343363028*^9, 
+   3.780419344980914*^9}},ExpressionUUID->"4f19c546-c292-420d-8109-\
+53a69a5693ab"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem  #2", "Subsection",
+ CellChangeTimes->{{3.778937500257454*^9, 3.778937501703059*^9}, 
+   3.873883714086466*^9, {3.905246946329143*^9, 
+   3.905246946464472*^9}},ExpressionUUID->"b9b86b62-cc47-40c2-8930-\
+4653347a6678"],
+
+Cell["\<\
+The process of \[OpenCurlyDoubleQuote]Histogram Equalization\
+\[CloseCurlyDoubleQuote] is described in detail in Gonzalo and Woods book in \
+Section 3.3. (It\[CloseCurlyQuote]s also discussed in the other books as \
+well). This is implemented in Mathematica in the function HistogramTransform. \
+Find a picture that is too dark or too light.
+
+(a) Apply the HistogramTransform to each of the RGB components separately and \
+then recombine to form a single image. 
+
+(b) Apply the HistogramTransform to each of the HSB components separately and \
+then recombine to form a single image. 
+
+(c) Apply the HistogramTransform to only the B component of HSB (leaving H \
+and S unchanged) and then recombine to form a single image. 
+
+(d) Read in the image of Vermeer\[CloseCurlyQuote]s L30 \
+(it\[CloseCurlyQuote]s allImagesColor[[13]] in the VisualVocabulary). It is a \
+very dark painting. Which of the above three strategies works best for this \
+image?  
+
+(e) Apply HistogramTransform to the full color image. Can you guess which of \
+(a), (b), (c) strategies  HistogramTransform follows by default?
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.7789375036403837`*^9, 3.778937520683206*^9}, {
+  3.778937642790518*^9, 3.7789376636693583`*^9}, {3.778937756665126*^9, 
+  3.7789377765201397`*^9}, {3.7789378301895933`*^9, 3.778937878513863*^9}, {
+  3.778937910490715*^9, 3.77893791281244*^9}, {3.7789379776741962`*^9, 
+  3.7789381341559134`*^9}, {3.778938196100769*^9, 3.7789383686728573`*^9}, {
+  3.778938913565503*^9, 
+  3.778939044057601*^9}},ExpressionUUID->"f2d60217-fc6c-4242-a0bf-\
+554e267a4f4c"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{225, Automatic}, {-76, Automatic}},
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b4c5aa25-e405-4913-a74d-57bc3ad42fa0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[1486, 35, 167, 3, 67, "Section",ExpressionUUID->"bd731fc8-7053-49c4-be8a-07930eb5318d"],
+Cell[CellGroupData[{
+Cell[1678, 42, 157, 3, 54, "Subsection",ExpressionUUID->"5c766c5c-c00a-4e63-8967-6a469730e3de"],
+Cell[1838, 47, 388, 8, 81, "Text",ExpressionUUID->"dfde67c1-c5b4-4185-b339-c3e03982172e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2263, 60, 231, 4, 54, "Subsection",ExpressionUUID->"8020620e-d312-4b24-823b-f3845341c750"],
+Cell[2497, 66, 734, 15, 127, "Text",ExpressionUUID->"4f19c546-c292-420d-8109-53a69a5693ab"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3268, 86, 232, 4, 54, "Subsection",ExpressionUUID->"b9b86b62-cc47-40c2-8930-4653347a6678"],
+Cell[3503, 92, 1595, 33, 472, "Text",ExpressionUUID->"f2d60217-fc6c-4242-a0bf-554e267a4f4c"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
